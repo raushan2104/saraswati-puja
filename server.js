@@ -69,12 +69,12 @@ app.get("/listings/:id/edit", async (req, res) => {
 });
 
 
-// Handle contact form submission
-app.post('/contact', (req, res) => {
-  // Here you would typically handle the form submission
-  // For now, we'll just send back a success response
-  res.json({ message: 'Message received successfully!' });
-});
+// // Handle contact form submission
+// app.post('/contact', (req, res) => {
+//   // Here you would typically handle the form submission
+//   // For now, we'll just send back a success response
+//   res.json({ message: 'Message received successfully!' });
+// });
 
 //Delete Route
 app.delete("/listings/:id", async (req, res) => {
