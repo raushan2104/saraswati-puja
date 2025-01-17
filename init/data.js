@@ -1,196 +1,204 @@
 const sampleListings = [
-    {
+  {
       title: "Saraswati Puja 2021",
-      description: "Beautiful decorations and vibrant celebrations.",
+      description: "Highlights and moments from the Saraswati Puja celebrations of 2021.",
       image: {
-        filename: "listingImage1",
-        url: "/images/image1.png",
+          filename: "listingImage1",
+          url: "/images/image1.png",
       },
-    },
-    {
+  },
+  {
       title: "Cultural Event Highlights",
-      description: "Mesmerizing dance performances during puja.",
+      description: "An overview of the cultural performances during the puja celebrations.",
       image: {
-        filename: "listingImage2",
-        url: "/images/image2.png",
+          filename: "listingImage2",
+          url: "/images/image2.png",
       },
-    },
-    {
-      title: "Puja Bhog Distribution",
-      description: "Delicious prasad served to devotees.",
+  },
+  {
+      title: "Social Work by Volunteers",
+      description: "Efforts by volunteers to serve prasad and help devotees during the event.",
       image: {
-        filename: "listingImage3",
-        url: "/images/image3.png",
+          filename: "listingImage3",
+          url: "/images/image3.png",
       },
-    },
-    {
-      title: "Morning Aarti",
-      description: "A serene start to Saraswati Puja celebrations.",
+  },
+  {
+      title: "Director Sir Visits Slum Area",
+      description: "The director's visit to slum areas, sharing joy and hope with children.",
       image: {
-        filename: "listingImage4",
-        url: "/images/image4.png",
+          filename: "listingImage4",
+          url: "/images/image4.png",
       },
-    },
-    {
-      title: "Students Participating in Puja",
-      description: "Students offering prayers with devotion.",
+  },
+  {
+      title: "Slum Children",
+      description: "Moments capturing slum children participating in the puja rituals.",
       image: {
-        filename: "listingImage5",
-        url: "/images/image5.png",
+          filename: "listingImage5",
+          url: "/images/image5.png",
       },
-    },
-    {
-      title: "Floral Decorations",
-      description: "The temple adorned with beautiful flowers.",
+  },
+  {
+      title: "Cleanliness Drive",
+      description: "A cleanliness drive to ensure a pristine and welcoming puja environment.",
       image: {
-        filename: "listingImage6",
-        url: "/images/image6.png",
+          filename: "listingImage6",
+          url: "/images/image6.png",
       },
-    },
-    {
-      title: "Saraswati Idol Setup",
-      description: "The divine idol beautifully decorated.",
+  },
+  {
+      title: "Social Work by Cimageian",
+      description: "Cimage students engaging in community service during Saraswati Puja.",
       image: {
-        filename: "listingImage7",
-        url: "/images/image7.png",
+          filename: "listingImage7",
+          url: "/images/image7.png",
       },
-    },
-    {
+  },
+  {
       title: "Lighting Ceremony",
-      description: "The ambiance lit with glowing diyas.",
+      description: "The ceremonial lighting of diyas marking the start of the puja.",
       image: {
-        filename: "listingImage8",
-        url: "/images/image8.png",
+          filename: "listingImage8",
+          url: "/images/image8.png",
       },
-    },
-    {
+  },
+  {
       title: "Traditional Music",
-      description: "Soulful music creating a spiritual vibe.",
+      description: "Enchanting traditional music filling the air with devotion and peace.",
       image: {
-        filename: "listingImage9",
-        url: "/images/image9.png",
+          filename: "listingImage9",
+          url: "/images/image9.png",
       },
-    },
-    {
+  },
+  {
       title: "Dance Performances",
-      description: "Classical dance performed by students.",
+      description: "Graceful classical dance performances by talented students.",
       image: {
-        filename: "listingImage10",
-        url: "/images/image10.png",
+          filename: "listingImage10",
+          url: "/images/image10.png",
       },
-    },
-    {
+  },
+  {
       title: "Art Competition",
-      description: "Students showcasing their creative artwork.",
+      description: "Students showcasing their artistic talents in a vibrant competition.",
       image: {
-        filename: "listingImage11",
-        url: "/images/image11.png",
+          filename: "listingImage11",
+          url: "/images/image11.png",
       },
-    },
-    {
+  },
+  {
       title: "Puja Invitation Poster",
-      description: "Invitation for the Saraswati Puja celebration.",
+      description: "The official invitation poster for the Saraswati Puja celebrations.",
       image: {
-        filename: "listingImage12",
-        url: "/images/image12.png",
+          filename: "listingImage12",
+          url: "/images/image12.png",
       },
-    },
-    {
+  },
+  {
       title: "Morning Procession",
-      description: "Devotees gathered for a holy procession.",
+      description: "A devotional morning procession by students and devotees.",
       image: {
-        filename: "listingImage13",
-        url: "/images/image13.png",
+          filename: "listingImage13",
+          url: "/images/image13.png",
       },
-    },
-    {
-      title: "Temple View at Night",
-      description: "The temple glowing under the moonlight.",
+  },
+  {
+      title: "Saraswati Idol Setup",
+      description: "The beautifully adorned Saraswati idol in the temple setup.",
       image: {
-        filename: "listingImage14",
-        url: "/images/image14.png",
+          filename: "listingImage14",
+          url: "/images/image14.png",
       },
-    },
-    {
-      title: "Prayer Hall Decorations",
-      description: "A well-decorated hall for prayers.",
+  },
+  {
+      title: "Hall Decorations",
+      description: "Elegant decorations in the hall for puja and rituals.",
       image: {
-        filename: "listingImage15",
-        url: "/images/image15.png",
+          filename: "listingImage15",
+          url: "/images/image15.png",
       },
-    },
-    {
-      title: "School Kids in Puja",
-      description: "Young students participating in rituals.",
+  },
+  {
+      title: "Art and Craft",
+      description: "Students creating art and craft to celebrate the puja spirit.",
       image: {
-        filename: "listingImage16",
-        url: "/images/image16.png",
+          filename: "listingImage16",
+          url: "/images/image16.png",
       },
-    },
-    {
-      title: "Food Preparation",
-      description: "Volunteers preparing prasad for devotees.",
+  },
+  {
+      title: "Morning Puja",
+      description: "Devotees participating in the morning puja rituals.",
       image: {
-        filename: "listingImage17",
-        url: "/images/image17.png",
+          filename: "listingImage17",
+          url: "/images/image17.png",
       },
-    },
-    {
-      title: "Saraswati Vandana",
-      description: "A group of students performing vandana.",
+  },
+  {
+      title: "Decoration Setup",
+      description: "The team preparing decorations for the grand puja event.",
       image: {
-        filename: "listingImage18",
-        url: "/images/image18.png",
+          filename: "listingImage18",
+          url: "/images/image18.png",
       },
-    },
-    {
-      title: "Puja Offerings",
-      description: "Traditional offerings placed for Saraswati.",
+  },
+  {
+      title: "Rangoli",
+      description: "Beautifully designed rangoli art enhancing the festive spirit.",
       image: {
-        filename: "listingImage19",
-        url: "/images/image19.png",
+          filename: "listingImage19",
+          url: "/images/image19.png",
       },
-    },
-    {
-      title: "Devotees Gathering",
-      description: "A large gathering of devotees for darshan.",
+  },
+  {
+      title: "Showing Art",
+      description: "An exhibition of art pieces created by talented students.",
       image: {
-        filename: "listingImage20",
-        url: "/images/image20.png",
+          filename: "listingImage20",
+          url: "/images/image20.png",
       },
-    },
-    {
-      title: "Decorative Rangoli",
-      description: "Colorful rangoli designs at the entrance.",
+  },
+  {
+      title: "Students Gathering",
+      description: "Students coming together to celebrate the auspicious occasion.",
       image: {
-        filename: "listingImage21",
-        url: "/images/image21.png",
+          filename: "listingImage21",
+          url: "/images/image21.png",
       },
-    },
-    {
-      title: "Music and Instruments",
-      description: "Musicians playing traditional instruments.",
+  },
+  {
+      title: "Showing Art in Rangoli",
+      description: "Creative rangoli designs showcasing artistic excellence.",
       image: {
-        filename: "listingImage22",
-        url: "/images/image22.png",
+          filename: "listingImage22",
+          url: "/images/image22.png",
       },
-    },
-    {
-      title: "Evening Puja",
-      description: "Aarti performed during the evening puja.",
+  },
+  {
+      title: "Students Enjoying Puja",
+      description: "Joyful moments of students participating in the puja festivities.",
       image: {
-        filename: "listingImage23",
-        url: "/images/image23.png",
+          filename: "listingImage23",
+          url: "/images/image23.png",
       },
-    },
-    {
-      title: "Special Guests",
-      description: "Distinguished guests attending the puja.",
+  },
+  {
+      title: "Art Showing",
+      description: "A display of diverse artistic creations by students.",
       image: {
-        filename: "listingImage24",
-        url: "/images/image24.png",
+          filename: "listingImage24",
+          url: "/images/image24.png",
       },
-    },
-    // Continue adding similar entries up to 48 listings...
-  ];
-  module.exports = { data: sampleListings };
+  },
+  {
+      title: "Cultural Performances",
+      description: "An array of cultural performances celebrating tradition and art.",
+      image: {
+          filename: "listingImage25",
+          url: "/images/culturalp.png",
+      },
+  },
+];
+
+module.exports = { data: sampleListings };

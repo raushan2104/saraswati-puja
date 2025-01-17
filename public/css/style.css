@@ -14,7 +14,7 @@
 
 html {
     font-family: 'Poppins', system-ui, sans-serif;
-    background: #ffffff;
+    background: white;
     scroll-behavior: smooth;
 }
 
@@ -26,7 +26,7 @@ img {
     /* max-width: 100%; */
     width: 150px;
     height: 80px;
-    /* height: auto; */
+    height: auto;
 }
 .text-content h1 {
     font-size: 2.5rem;
@@ -52,7 +52,6 @@ img {
     padding: 1rem 2rem;
     background: var(--accent-light);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: index 2; 
 }
 
 .logo {
@@ -91,6 +90,19 @@ img {
     
       
 }
+/* header more info */
+
+  .link-container a {
+    text-decoration: none;
+    /* color: #007bff; */
+    font-size: 18px;
+  }
+
+  .link-container a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
 /* navbar */
 .nvbar{
     align-items: center !important;
@@ -329,9 +341,9 @@ h2 {
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
-.text img{
+/* .text img{
     /* object-fit: cover; */
-}
+} */
 
 .highlights {
     display: grid;
@@ -362,7 +374,7 @@ h2 {
     grid-template-columns: 2fr 1fr;
 }
 
-/* Events Section */
+
 .events {
     padding: 5rem 0;
     background-color: #fff;
@@ -375,6 +387,7 @@ h2 {
 }
 
 .event-card {
+    position: relative;
     background: white;
     border-radius: 12px;
     overflow: hidden;
@@ -384,6 +397,56 @@ h2 {
 
 .event-card:hover {
     transform: translateY(-5px);
+}
+
+.event-card::before,
+.event-card::after {
+    content: '';
+    position: absolute;
+    border-radius: 12px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.event-card::before {
+    border-top-color: var(--accent);
+    border-right-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.event-card::after {
+    border-bottom-color: var(--accent);
+    border-left-color: var(--accent);
+    transform: scale(0.95);
+}
+
+.event-card:hover::before,
+.event-card:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes border-animate {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
 }
 
 .event-image {
@@ -399,6 +462,8 @@ h2 {
 
 .event-details {
     padding: 1.5rem;
+    z-index: 2; /* Ensures text is above pseudo-elements */
+    position: relative;
 }
 
 .event-details h3 {
@@ -418,6 +483,8 @@ h2 {
     font-size: 0.9rem;
     line-height: 1.6;
 }
+
+
 /* cards */
 .card{
     border: none !important;
@@ -434,6 +501,7 @@ h2 {
 .listing_link{
     text-decoration: none;
 }
+
 /* card effect  */
 .card-img-overlay{
     opacity: :0;
@@ -539,7 +607,6 @@ h2 {
     background: var(--accent-dark);
 }
 /* Footer */
-/* footer */
 .f-info-links a{
     text-decoration: none;
 }
@@ -572,28 +639,6 @@ h2 {
     align-items: space-evenly;
 }
 
-/* page lYOUT DESIGN */
-.custom-shape-divider-top-1736961771 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1736961771 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 79px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1736961771 .shape-fill {
-    fill: #FFFFFF;
-}
 
 
 @media (max-width: 768px) {
