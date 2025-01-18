@@ -83,6 +83,10 @@ app.delete("/listings/:id", async (req, res) => {
   console.log(deletedListing);
   res.redirect("/show");
 });
+
+app.get('/contact', (req, res) => {
+  res.render('listings/contact');
+});
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });

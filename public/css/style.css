@@ -192,7 +192,9 @@ img {
     align-items: center;
     z-index: 1000;
 }
-
+.popup h2{
+    color: black;
+}
 .popup.active {
     display: flex;
 }
@@ -213,6 +215,7 @@ img {
 .popup-content label {
     display: block;
     margin-bottom: 0.5rem;
+    color: black;
 }
 
 .popup-content input,
@@ -226,7 +229,7 @@ img {
 
 .popup-content button {
     background-color: red;
-    color: white;
+    color: black;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -504,12 +507,14 @@ h2 {
 
 /* card effect  */
 .card-img-overlay{
-    opacity: :0;
+    opacity:0;
 }
 
 .card-img-overlay:hover{
-    opacity: 0.2;
-    background-color: white;
+    transform: scale(1.2);
+    /* opacity: 0.2; */
+    /* background-color: white; */
+    
 }
 
 /* Responsive Design */
@@ -528,83 +533,7 @@ h2 {
 }
 
 
-   /* Contact Page Styles */
-.contact-page {
-    background-color: #fff;
-    min-height: 100vh;
-    padding-bottom: 4rem;
-}
-
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-top: 3rem;
-}
-
-.contact-info {
-    display: grid;
-    gap: 2rem;
-}
-
-.info-card {
-    background: #fff8f3;
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.info-card i {
-    font-size: 2rem;
-    color: var(--accent);
-    margin-bottom: 1rem;
-}
-
-.contact-form {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
-}
-
-.form-group textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.submit-btn {
-    background: var(--accent);
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
-.submit-btn:hover {
-    background: var(--accent-dark);
+   
 }
 /* Footer */
 .f-info-links a{
@@ -641,6 +570,10 @@ h2 {
 
 
 
+
+
+
+
 @media (max-width: 768px) {
     .contact-content {
         grid-template-columns: 1fr;
@@ -649,4 +582,115 @@ h2 {
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
+}
+
+/*-----------------------------------*\
+  #CONTACT
+\*-----------------------------------*/
+
+.container1 {
+    display: flex; /* Flexbox का उपयोग */
+    justify-content: center; /* Horizontal alignment center */
+    align-items: flex-start; /* Vertical alignment top */
+    gap: 20px; /* मैप और फॉर्म के बीच अंतर */
+    margin: 20px auto;
+    max-width: 1200px; /* पंक्ति की अधिकतम चौड़ाई */
+    flex-wrap: wrap; /* छोटे स्क्रीन के लिए wrapping */
+}
+
+.mapbox {
+    position: relative;
+    height: 350px;
+    width: 50%; /* मैप की चौड़ाई */
+    border-radius: 16px;
+    border: 1px solid rgb(56, 56, 56);
+    overflow: hidden;
+    flex-shrink: 0; /* मैप की चौड़ाई को स्थिर रखें */
+}
+
+.mapbox iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contact-form {
+    max-width: 500px; /* फॉर्म की अधिकतम चौड़ाई */
+    flex-grow: 1; /* फॉर्म को उपलब्ध जगह भरने दें */
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 219, 112);
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.form-input {
+    color: white;
+    font-size: 14px;
+    padding: 13px 20px;
+    border: 1px solid rgb(56, 56, 56);
+    border-radius: 14px;
+    background-color: #1c1c1c;
+    outline: none;
+}
+
+.form-input::placeholder {
+    font-weight: 500;
+    color: #aaa;
+}
+
+.form-input:focus {
+    border-color: rgb(255, 219, 112);
+    background-color: #2a2a2a;
+}
+
+textarea.form-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-btn {
+    width: 100%;
+    background: linear-gradient(
+        to bottom right, 
+        hsl(240, 1%, 25%) 3%, 
+        hsl(0, 0%, 19%) 97%
+    );
+    color: rgb(255, 219, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 20px;
+    border-radius: 14px;
+    font-size: 16px;
+    text-transform: capitalize;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background: linear-gradient(
+        to bottom right, 
+        hsl(45, 100%, 71%) 0%, 
+        hsl(36, 100%, 69%) 100%
+    );
+}
+
+.form-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: hsl(0, 0%, 25%);
 }
