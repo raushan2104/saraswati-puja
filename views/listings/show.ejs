@@ -1,25 +1,20 @@
 <% layout("/layouts/boilerplate")%>
   <body>
-    <h3>Moments</h3>
-    <!-- <form method="GET" action="/listings/new">
-      <button>Create New Listing</button>
-    </form> -->
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-      <% for(let listing of allListings) { %>
-        <a href="/listings/<%=listing._id%>" class="listing_link">
-        <div class="card">
-          <img src="<%=listing.image%>" class="card-img-top" alt="..." style="height:18rem">
-      
-          <div class="card-img-overlay"></div>
-          <div class="card-body">
-            <p class="card-text">
-              <b><%= listing.title %></b> <br>
-            </p>
+    <!-- cards -->
+   <div class="container">
+    <h2>Images Gallery</h2>
+    <div class="card__container">
+      <% for (let listing of allListings) { %>
+        <article class="card__article">
+          <img src="<%= listing.image %>" alt="image" class="card__img">
+  
+          <div class="card__data">
+            <!-- <span class="card__description"><%= listing.description %></span> -->
+            <h2 class="card__title"><%= listing.title %></h2>
+            <a href="/listings/<%=listing._id%>" class="card__button">Read More</a>
           </div>
-        </div>
-      </a>
-        <% } %>
-        <ul>
+        </article>
+      <% } %>
     </div>
-    
+  </div>
   

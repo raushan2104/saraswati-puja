@@ -1,61 +1,139 @@
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%) rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%) rotateY(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
 .about-event {
-  margin: 50px auto; /* Center the section horizontally and add vertical spacing */
+  margin: 50px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 40px;
   max-width: 1200px;
   background: linear-gradient(180deg, #fffef5, #fefae3);
-  border-radius: 15px; /* Increased border radius for a softer look */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a modern feel */
-  gap: 20px; /* Adds spacing between content and image */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  gap: 20px;
 }
 
 .content {
   max-width: 600px;
+  animation: slideInLeft 1.2s ease-out;
 }
 
 .content h2 {
-  font-size: 2.5rem; /* Increased font size */
-  color: #222; /* Slightly darker for better contrast */
+  font-size: 2.5rem;
+  color: #222;
   margin-bottom: 20px;
-  font-weight: bold; /* Makes the heading stand out */
+  font-weight: bold;
 }
 
 .content p {
-  font-size: 1.1rem; /* Slightly larger font size for readability */
-  color: #444; /* Darker text for better contrast */
-  line-height: 1.8; /* Better spacing between lines */
-  margin-bottom: 15px; /* Adds spacing between paragraphs */
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 15px;
 }
 
 .image-container {
   max-width: 500px;
-  max-height: 350px; /* Adjust height for better proportions */
+  max-height: 350px;
   overflow: hidden;
-  border-radius: 15px; /* Matches the main container’s rounded corners */
-  background: #fff; /* Clean white background */
+  border-radius: 15px;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 6px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid #fefae3; /* Adds a subtle border */
+  border: 2px solid #fefae3;
+  animation: slideInRight 1.2s ease-out;
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out; /* Adds hover animation */
+  transition: transform 0.3s ease-in-out;
 }
 
 .image-container img:hover {
-  transform: scale(1.1); /* Subtle zoom effect on hover */
+  transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .about-event {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .content {
+    max-width: 100%; /* Full width for content */
+    margin-bottom: 20px; /* Space between content and image */
+  }
+
+  .image-container {
+    max-width: 100%; /* Full width for the image container */
+    max-height: 300px; /* Adjust height for better proportion */
+  }
+
+  .content h2 {
+    font-size: 2rem; /* Reduce font size */
+    margin-bottom: 15px; /* Adjust margin */
+  }
+
+  .content p {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  .image-container img {
+    height: auto; /* Maintain aspect ratio of images */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-event {
+    padding: 15px; /* Further reduce padding on mobile screens */
+  }
+
+  .content h2 {
+    font-size: 1.6rem; /* Further reduce font size for small screens */
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+
+  .image-container {
+    max-height: 250px; /* Adjust height on very small screens */
+  }
+
+  .image-container img {
+    object-position: center; /* Ensure image is centered */
+  }
 }
 
 /* EVENT CARDS  */
 .events {
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
   padding: 5rem 0;
   background-color: #fff;
 }
@@ -73,6 +151,9 @@
   overflow: hidden;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  animation: scroll  ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .event-card:hover {

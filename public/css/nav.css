@@ -1,0 +1,348 @@
+:root {
+    --accent: black;
+    --accent-light: pink;
+    --accent-dark: black;
+}
+
+/* Global reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  width: 150px;
+  height: 80px;
+  height: auto;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-top: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--accent-light);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow header to wrap on smaller screens */
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo img {
+  height: 80px;
+  object-fit: contain;
+}
+
+.slogo img {
+  height: 80px;
+  object-fit: contain;
+}
+
+.text-content {
+  flex: 1;
+  text-align: center;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+}
+
+.text-content p {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-top: 0.5rem;
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typewriter 5s steps(40, end) 1s forwards;
+}
+
+/* Keyframe for typewriter animation */
+@keyframes typewriter {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .header {
+      padding: 1rem 1.5rem; /* Reduced padding on larger screens */
+  }
+
+  .logo img {
+      height: 70px; /* Reduced logo size */
+  }
+
+  .text-content h1 {
+      font-size: 2rem; /* Reduced header font size */
+  }
+
+  .text-content p {
+      font-size: 1rem; /* Reduced paragraph font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column; /* Stack header elements vertically */
+      align-items: center; /* Center align items */
+      padding: 1rem; /* Reduce padding */
+  }
+
+  .logo img {
+      height: 60px; /* Further reduce logo size */
+  }
+
+  .text-content h1 {
+      font-size: 1.8rem; /* Further reduce header font size */
+  }
+
+  .text-content p {
+      font-size: 0.9rem; /* Further reduce paragraph font size */
+      width: 90%; /* Increase paragraph width for better readability */
+      font-weight: 300; /* Slightly lighter text for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      padding: 1rem 1rem; /* Reduced padding for very small screens */
+  }
+
+  .logo img {
+      height: 50px; /* Reduce logo size even more */
+  }
+
+  .text-content h1 {
+      font-size: 1.5rem; /* Reduce font size for header */
+  }
+
+  .text-content p {
+      font-size: 0.8rem; /* Reduce font size for paragraph */
+      width: 100%; /* Ensure paragraph takes full width */
+  }
+}
+
+
+
+
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .menu li {
+    display: inline;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar .menu li a:hover {
+    color: #ff9800;
+}
+
+.navbar .cta {
+    background-color: #ff9800;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar .cta:hover {
+    background-color: #e68a00;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.navbar button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: darkred;
+}
+
+/* Popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup h2{
+    color: black;
+}
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+}
+
+.popup-content h2 {
+    margin-bottom: 1rem;
+}
+
+.popup-content label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.popup-content input,
+.popup-content select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+}
+
+.popup-content .close-btn:hover {
+    color: darkred;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+
+   
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

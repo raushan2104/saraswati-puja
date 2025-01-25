@@ -108,3 +108,55 @@ textarea.form-input {
     cursor: not-allowed;
     background: hsl(0, 0%, 25%);
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column; /* Stack map and form vertically */
+        gap: 30px; /* Increased gap for better spacing */
+    }
+
+    .mapbox {
+        width: 100%; /* Map takes full width */
+        height: 250px; /* Adjust height for smaller screens */
+    }
+
+    .contact-form {
+        width: 100%; /* Form takes full width */
+        max-width: none; /* Remove the max-width */
+    }
+
+    .form-title {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .form-input {
+        font-size: 16px; /* Increase input font size */
+        padding: 12px 18px; /* Adjust padding */
+    }
+
+    .form-btn {
+        font-size: 14px; /* Adjust button font size */
+        padding: 12px 18px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-title {
+        font-size: 16px; /* Further adjust title font size */
+    }
+
+    .form-input {
+        font-size: 14px; /* Adjust font size for inputs */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .form-btn {
+        font-size: 14px; /* Keep button font size small */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .mapbox {
+        height: 200px; /* Further reduce map height */
+    }
+}

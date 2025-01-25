@@ -1,0 +1,119 @@
+/* Footer */
+.footer {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ccc;
+}
+
+.footer {
+  background-color: #0d1117;
+  color: #ccc;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 10%;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #222;
+  padding-top: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column; /* Stack the sections vertically */
+      padding: 0 5%; /* Reduce the padding for smaller screens */
+  }
+
+  .footer-section {
+      margin-bottom: 20px; /* Add space between sections */
+      text-align: center; /* Center-align text in each section */
+  }
+
+  .footer-section h3 {
+      font-size: 18px; /* Adjust header size */
+  }
+
+  .footer-section p,
+  .footer-section ul li a {
+      font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  .social-icons {
+      margin-top: 20px; /* Add space above social icons */
+      justify-content: center; /* Center the social icons */
+  }
+
+  .social-icons a {
+      margin-right: 15px; /* Increase space between icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+      padding: 0 2%; /* Further reduce padding */
+  }
+
+  .footer-section h3 {
+      font-size: 16px; /* Further reduce header font size */
+  }
+
+  .footer-bottom {
+      font-size: 12px; /* Reduce font size in footer bottom */
+  }
+
+  .footer-section p,
+  .footer-section ul li a {
+      font-size: 14px; /* Adjust font size for small screens */
+  }
+}

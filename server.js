@@ -33,8 +33,7 @@ app.use(methodOverride("_method"));
 // Routes
 app.get('/', (req, res) => {
   res.render('listings/index');
-  // res.render('listings/index');
-  // res.render('listings/index', { layout: 'layouts/boilerplate', title: 'Home' });
+  
 
 
 
@@ -59,7 +58,6 @@ app.get("/listings/:id", async (req, res) => {
   const listing = await Listing.findById(id);
   res.render("listings/detail.ejs", { listing });
 });
-
 // edit route
 //Edit Route
 app.get("/listings/:id/edit", async (req, res) => {
@@ -69,12 +67,6 @@ app.get("/listings/:id/edit", async (req, res) => {
 });
 
 
-// // Handle contact form submission
-// app.post('/contact', (req, res) => {
-//   // Here you would typically handle the form submission
-//   // For now, we'll just send back a success response
-//   res.json({ message: 'Message received successfully!' });
-// });
 
 //Delete Route
 app.delete("/listings/:id", async (req, res) => {
