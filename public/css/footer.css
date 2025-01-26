@@ -1,4 +1,3 @@
-/* Footer */
 .footer {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -17,7 +16,12 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 10%;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 calc(33.33% - 20px);
+  margin: 10px;
 }
 
 .footer-section h3 {
@@ -68,52 +72,65 @@
   padding-top: 10px;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .footer-container {
-      flex-direction: column; /* Stack the sections vertically */
-      padding: 0 5%; /* Reduce the padding for smaller screens */
+    flex-direction: column;
+    padding: 0 5%;
   }
 
   .footer-section {
-      margin-bottom: 20px; /* Add space between sections */
-      text-align: center; /* Center-align text in each section */
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .footer-section h3 {
-      font-size: 18px; /* Adjust header size */
+    font-size: 18px;
   }
 
   .footer-section p,
   .footer-section ul li a {
-      font-size: 16px; /* Adjust font size for better readability */
+    font-size: 16px;
   }
 
   .social-icons {
-      margin-top: 20px; /* Add space above social icons */
-      justify-content: center; /* Center the social icons */
+    margin-top: 20px;
+    justify-content: center;
   }
 
   .social-icons a {
-      margin-right: 15px; /* Increase space between icons */
+    margin-right: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .footer-container {
-      padding: 0 2%; /* Further reduce padding */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 2%;
+  }
+
+  .footer-section {
+    flex: 1 1 50%;
+    text-align: center;
   }
 
   .footer-section h3 {
-      font-size: 16px; /* Further reduce header font size */
+    font-size: 16px;
   }
 
   .footer-bottom {
-      font-size: 12px; /* Reduce font size in footer bottom */
+    font-size: 12px;
   }
 
   .footer-section p,
   .footer-section ul li a {
-      font-size: 14px; /* Adjust font size for small screens */
+    font-size: 14px;
+  }
+
+  .footer-section.quick-links,
+  .footer-section.connect-with-us {
+    margin: 0;
+    text-align: center;
   }
 }
