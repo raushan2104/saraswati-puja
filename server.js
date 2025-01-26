@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -6,11 +8,11 @@ const mongoose = require("mongoose");
 const Listing = require("./models/listing.js");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
-require('dotenv').config();
 const MONGO_URL = process.env.MONGO_DB_URI;
 
 main()
   .then(() => {
+    console.log(process.env.MONGO_DB_URI)
     console.log("connected to DB");
   })
   .catch((err) => {
@@ -23,7 +25,7 @@ async function main() {
 
 // Set EJS as templating engine
 app.engine('ejs', ejsMate);
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
@@ -44,10 +46,16 @@ app.get('/', (req, res) => {
 
 app.get("/show", async (req, res) => {
   try {
+    console.time("Fetching Listings"); // Start timing
+
     const allListings = await Listing.find({})
       .select('title image _id')  // Select only essential fields
-      .limit(50)  // Limit total documents
-      .lean();  // Convert to plain JavaScript objects for faster processing
+      .limit(50)
+      .lean();
+
+    console.timeEnd("Fetching Listings"); // End timing and log duration
+
+    console.log(`Fetched ${allListings.length} listings.`); // Log how many items were fetched
 
     res.render("listings/show", { allListings });
   } catch (error) {
@@ -55,6 +63,7 @@ app.get("/show", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
 
 // immage details route
 //Show Route
