@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const initData = require("./data.js");
 const Listing = require("../models/listing.js");
+require('dotenv').config();
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/spuja";
+const MONGO_URL = process.env.MONGO_DB_URI;
 
 main()
   .then(() => {
