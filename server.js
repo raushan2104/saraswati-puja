@@ -5,8 +5,9 @@ const port = 3000;
 const mongoose = require("mongoose");
 const Listing = require("./models/listing.js");
 const methodOverride = require("method-override");
-const ejsMate= require("ejs-mate");
-const MONGO_URL = "mongodb://127.0.0.1:27017/spuja";
+const ejsMate = require("ejs-mate");
+require('dotenv').config();
+const MONGO_URL = process.env.MONGO_DB_URI;
 
 main()
   .then(() => {
@@ -21,7 +22,7 @@ async function main() {
 }
 
 // Set EJS as templating engine
-app.engine('ejs',ejsMate);
+app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "views"));
@@ -33,7 +34,7 @@ app.use(methodOverride("_method"));
 // Routes
 app.get('/', (req, res) => {
   res.render('listings/index');
-  
+
 
 
 
